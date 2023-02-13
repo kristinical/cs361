@@ -1,0 +1,10 @@
+cities = [("Seattle", "USA"), ("London", "England"), ("Barcelona", "Spain"), ("Paris", "France"),
+          ("Accra", "Ghana"), ("Cape Town", "South Africa"), ("Marrakesh", "Morocco"), ("Tokyo", "Japan"),
+          ("Sydney", "Australia"), ("Melbourne", "Australia"), ("Auckland", "New Zealand"), ("Madrid", "Spain"),
+          ("Bangkok", "Thailand"), ("Seoul", "South Korea"), ("Ho Chi Minh", "Vietnam"), ("Edinburgh", "Scotland"),
+          ("Dublin", "Ireland"), ("Florence", "Italy"), ("Rome", "Italy"), ("Queenstown", "New Zealand"),
+          ("Stockholm", "Sweden"), ("Oslo", "Norway"), ("Copenhagen", "Denmark"), ("Prague", "Czech Republic"),
+          ("Budapest", "Hungary"), ("Istanbul", "Turkey"), ("Seville", "Spain"), ("Brussels", "Belgium"),
+          ("Lisbon", "Portugal"), ("Valletta", "Malta"), ("New York", "USA"), ("Los Angeles", "USA"),
+          ("Kyoto", "Japan"), ("Siem Reap", "Cambodia"), ("Mexico City", "Mexico"), ("Santiago", "Chile"),
+          ("Buenos Aires", "Argentina"), ("Sao Paulo", "Brazil"), ("San Jose", "Costa Rica"), ("Berlin", "Germany")]
