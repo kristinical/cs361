@@ -28,6 +28,7 @@ def add_task():
     task_list = open('tasks.txt', 'a')
     task_list.writelines([json.dumps(task), '\n'])
     task_list.close()
+    print("\nTask added!".center(35))
 
 def edit_task():
     pass

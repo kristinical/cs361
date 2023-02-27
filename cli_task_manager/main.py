@@ -1,5 +1,4 @@
 from pip._vendor import requests
-import json
 from prompts import *
 from functions import *
 
