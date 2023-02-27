@@ -1,21 +1,29 @@
 from pip._vendor import requests
 import json
-from tasks import *
 from prompts import *
 from functions import *
 
-# Display prompt to user
 print(welcome_message)
+view_tasks()
+print(menu)
+action = input(actions)
+while action != "5":
+    match action:
+        case "1":
+            add_task()
+        case "2":
+            edit_task()
+        case "3":
+            delete_task()
+        case "4":
+            view_tasks()
+        case _:
+            print("\nInvalid selection. Please try again:")
+            action = input(actions)
+    print(menu)
+    action = input(actions)
 
-if not tasksToDO:
-    print(no_tasks)
-else:
-    print(tasks.center(35))
-    sort_list(tasksToDO)
-    print_task_list(tasksToDO)
-
-# View tasks in chronological order
-
+print(goodbye)
 
 # Mark task as complete
 
@@ -36,5 +44,5 @@ else:
 
 
 # Request & receive data from microservice
-for task in tasksToDO:
-    print(get_message(task['Due']))
+# for task in tasksToDO:
+#     print(get_message(task['Due']))

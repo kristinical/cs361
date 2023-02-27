@@ -1,9 +1,13 @@
 welcome_message = "\nWelcome to your TASK MANAGER!\n"
 
-tasks = "TO DO LIST:"
+no_tasks = "\nYou currently have no tasks to complete."
 
-no_tasks = "You currently have no tasks to complete.\n" \
-    + "\nPLEASE SELECT AN OPTION:\n" \
-    + "1. Create new task\n" \
-    + "2. View completed tasks\n" \
-    + "3. Exit\n"
+menu = "\nPLEASE SELECT AN OPTION:"
+
+actions = "  1. Create new task\n" \
+    + "  2. Edit a task\n" \
+    + "  3. Delete a task\n" \
+    + "  4. View task list\n" \
+    + "  5. Exit\n"
+
+goodbye = "\nGoodbye!"
