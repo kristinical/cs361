@@ -1,13 +1,23 @@
-welcome_message = "\nWelcome to your TASK MANAGER!\n"
+welcome_message = "WELCOME TO YOUR TASK MANAGER!\n"
 
-no_tasks = "\nYou currently have no tasks to complete."
+no_todo_tasks = "You currently have no tasks to do."
 
-menu = "\nPLEASE SELECT AN OPTION:"
+no_completed_tasks = "You have no tasks completed."
 
-actions = "  1. Create new task\n" \
-    + "  2. Edit a task\n" \
-    + "  3. Delete a task\n" \
-    + "  4. View task list\n" \
-    + "  5. Exit\n"
+menu = "WHAT WOULD YOU LIKE TO DO?"
 
-goodbye = "\nGoodbye!"
+actions = "\t 1. Create new task\n" \
+    + "\t 2. Edit a task\n" \
+    + "\t 3. Delete a task\n" \
+    + "\t 4. Mark task as complete\n" \
+    + "\t 5. View completed tasks\n" \
+    + "\t 6. Exit\n" \
+    + "\n"
+
+edit_actions = "What would you like to do?\n" \
+    + "  1. Edit a task name\n" \
+    + "  2. Edit a due date\n" \
+    + "  3. Cancel\n" \
+    + "\n"
+
+goodbye = "Your tasks have been saved!\nExiting program\n"

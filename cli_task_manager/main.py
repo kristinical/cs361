@@ -1,12 +1,15 @@
-from pip._vendor import requests
-from prompts import *
-from functions import *
+from completed_tasks import *
 
-print(welcome_message)
-view_tasks()
-print(menu)
-action = input(actions)
-while action != "5":
+system('clear')
+open_task_lists()
+print(welcome_message.center(40))
+action = menu_selection()
+
+"""
+Continuously prompt user to make a menu selection and process
+their selected action until they choose to exit (option 6)
+"""
+while action != "6":
     match action:
         case "1":
             add_task()
@@ -15,33 +18,14 @@ while action != "5":
         case "3":
             delete_task()
         case "4":
-            view_tasks()
+            complete_task()
+        case "5":
+            view_completed_tasks()
         case _:
-            print("\nInvalid selection. Please try again:")
-            action = input(actions)
-    print(menu)
-    action = input(actions)
+            system('clear')
+            print("INVALID SELECTION.\n")
+    action = menu_selection()
 
+system('clear')
+save_task_lists()
 print(goodbye)
-
-# Mark task as complete
-
-
-# View completed tasks
-
-
-# Unmark task as complete (goes back to to-do list)
-
-
-# Delete task
-
-
-# Edit task
-
-
-# Create new task
-
-
-# Request & receive data from microservice
-# for task in tasksToDO:
-#     print(get_message(task['Due']))

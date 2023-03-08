@@ -39,13 +39,15 @@ def generate_message(due_date):
         case -7:
             message = '1 week ago'
         case -14 | -21:
-            message = f'{int(days / -7)} weeks ago'
+            message = f'{int(days / -7)} weeks ago [OVERDUE!]'
         case 14 | 21:
             message = f'in {int(days / 7)} weeks'
         case _ if 1 < days < 21:
             message = f'in {days} days'
-        case _ if days < -1:
-            message = f'{days * -1} days ago'
+        case _ if -21 < days < -1:
+            message = f'{days * -1} days ago [OVERDUE!]'
+        case _ if days < -21:
+            message = f'{due_date} [OVERDUE!]'
         case _:
             message = f'{due_date}'
     return jsonify(message=message)
