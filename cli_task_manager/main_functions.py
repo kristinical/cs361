@@ -1,4 +1,3 @@
-from pip._vendor import requests
 from file_functions import *
 from edit_functions import *
 
@@ -27,16 +26,6 @@ def sort_todo_list():
 def print_task_list():
     for item in to_do_list:
         task = item['Task']
-        due = get_message(item['Due'])
-        print(f'{task} –– Due {due}'.center(40))
+        due = item['Msg']
+        print(f'{task:>12} –– Due {due:<20}'.center(40))
 
-
-def get_message(date):
-    """
-    Call to partner's microservice that sends a date and receives a
-    message string that tells user when each task is due
-    """
-    url = f"http://localhost:8080/due/{date}"
-    response = requests.get(url)
-    json_data = json.loads(response.text)
-    return json_data['message']

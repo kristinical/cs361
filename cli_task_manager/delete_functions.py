@@ -51,7 +51,7 @@ def list_valid_tasks():
     """
     Displays list of current tasks on To-Do List in alphabetical order
     """
-    print("Available tasks:")
+    print("Current tasks:")
     to_do_list.sort(key = lambda x: x['Task'])
     for task in to_do_list:
         print("  " + task['Task'])

@@ -1,18 +1,18 @@
 import datetime
 from os import system
-from file_functions import to_do_list
-
+from file_functions import *
 
 def add_task():
     system('clear')
     print("ADD A TASK\n".center(40))
-    name = get_task_name("New task name (or enter -1 to cancel): ")
+    name = get_task_name("New task name (enter -1 to cancel): ")
     if name == "-1":
         system('clear')
         print("CREATE TASK CANCELLED\n".center(40))
         return
-    due_date = get_due_date()
-    to_do_list.append({'Task':name, 'Due':due_date})
+    due_date = get_due_date("Due date (MM-DD-YYYY): ")
+    message = get_message(due_date)
+    to_do_list.append({'Task':name, 'Due':due_date, 'Msg':message})
     system('clear')
     print("TASK ADDED!\n".center(40))
 
@@ -36,11 +36,11 @@ def valid_name(new_name):
     return True
 
 
-def get_due_date():
-    date = input("Due date (MM-DD-YYYY): ")
+def get_due_date(prompt):
+    date = input(prompt)
     while not valid_date(date):
         print("\nInvalid format.")
-        date = input("Due date (MM-DD-YYYY): ")
+        date = input(prompt)
     return date
 
 

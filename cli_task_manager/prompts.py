@@ -2,7 +2,7 @@ welcome_message = "WELCOME TO YOUR TASK MANAGER!\n"
 
 no_todo_tasks = "You currently have no tasks to do."
 
-no_completed_tasks = "You have no tasks completed."
+no_completed_tasks = "You have no completed tasks."
 
 menu = "WHAT WOULD YOU LIKE TO DO?"
 

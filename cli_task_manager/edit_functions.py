@@ -45,5 +45,7 @@ def edit_name(task_index):
 
 
 def edit_date(task_index):
-    new_date = get_due_date()
+    print(f"\nCurrent due date: {to_do_list[task_index]['Due']}")
+    new_date = get_due_date("Updated due date (MM-DD-YYYY): ")
     to_do_list[task_index]['Due'] = new_date
+    to_do_list[task_index]['Msg'] = get_message(new_date)

@@ -60,5 +60,5 @@ def print_completed_list():
     for item in completed_tasks:
         task = item['Task']
         completed_date = item['Complete']
-        print(f'{task} –– Completed {completed_date}'.center(40))
+        print(f'{task:>12} –– Completed {completed_date:<20}'.center(40))
     print('\n')
